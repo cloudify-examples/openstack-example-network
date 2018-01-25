@@ -35,6 +35,8 @@ If you do not provide your own `deployment inputs` below, you must add these sec
   * `region`, such as `RegionOne`.
 
 
+Find the name of your Openstack Floating IP Network. You will need this value for the `external_network_name` input when you create your deployment.
+
 ## Installation
 
 On your Cloudify Manager, navigate to `Local Blueprints` select `Upload`.
