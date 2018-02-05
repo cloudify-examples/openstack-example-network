@@ -5,7 +5,7 @@ description: >
 
 imports:
   - http://www.getcloudify.org/spec/cloudify/4.2/types.yaml
-  - http://www.getcloudify.org/spec/openstack-plugin/2.5.2/plugin.yaml
+  - http://www.getcloudify.org/spec/openstack-plugin/2.6.0/plugin.yaml
 
 inputs:
 
@@ -36,20 +36,20 @@ inputs:
     default: [8.8.4.4, 8.8.8.8]
 
   public_subnet_cidr:
-    default: 192.168.120.0/24
+    default: 192.167.120.0/24
 
   public_subnet_allocation_pools:
     default:
-    - start: 192.168.120.2
-      end: 192.168.120.254
+    - start: 192.167.120.2
+      end: 192.167.120.254
 
   private_subnet_cidr:
-    default: 192.168.121.0/24
+    default: 192.167.121.0/24
 
   private_subnet_allocation_pools:
     default:
-    - start: 192.168.121.2
-      end: 192.168.121.254
+    - start: 192.167.121.2
+      end: 192.167.121.254
 
 dsl_definitions:
 
