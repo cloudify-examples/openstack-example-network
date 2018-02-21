@@ -36,20 +36,20 @@ inputs:
     default: [8.8.4.4, 8.8.8.8]
 
   public_subnet_cidr:
-    default: 192.167.120.0/24
+    default: 10.10.0.0/24
 
   public_subnet_allocation_pools:
     default:
-    - start: 192.167.120.2
-      end: 192.167.120.254
+    - start: 10.10.0.2
+      end: 10.10.0.254
 
   private_subnet_cidr:
-    default: 192.167.121.0/24
+    default: 10.10.1.0/24
 
   private_subnet_allocation_pools:
     default:
-    - start: 192.167.121.2
-      end: 192.167.121.254
+    - start: 10.10.1.2
+      end: 10.10.1.254
 
 dsl_definitions:
 
