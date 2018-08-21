@@ -36,12 +36,12 @@ inputs:
     default: [8.8.4.4, 8.8.8.8]
 
   public_subnet_cidr:
-    default: 10.10.0.0/24
+    default: 2605:1c00:50f2:2207::/64
 
   public_subnet_allocation_pools:
     default:
-    - start: 10.10.0.2
-      end: 10.10.0.254
+    - start: 2605:1c00:50f2:2207::64
+      end: 2605:1c00:50f2:2207:ffff:ffff:ffff:ff
 
   private_subnet_cidr:
     default: 10.10.1.0/24
@@ -92,9 +92,11 @@ node_templates:
     properties:
       openstack_config: *client_config
       subnet:
-        ip_version: 4
+        ip_version: 6
         cidr: { get_input: public_subnet_cidr }
-        dns_nameservers: { get_input: nameservers }
+        dns_nameservers:
+        - 2001:4860:4860::8888
+        - 2001:4860:4860::8844
         allocation_pools: { get_input: public_subnet_allocation_pools }
     relationships:
     - type: cloudify.relationships.contained_in
